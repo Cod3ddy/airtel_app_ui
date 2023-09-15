@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   _appBar(height) => PreferredSize(
-        preferredSize: Size(MediaQuery.of(context).size.width, height + 250),
+        preferredSize: Size(MediaQuery.of(context).size.width, height + 500),
         child: Stack(
           children: [
             Container(
@@ -82,9 +82,17 @@ class _HomeScreenState extends State<HomeScreen> {
               right: 20.0,
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.9,
-                height: MediaQuery.of(context).size.height * 0.3,
+                height: MediaQuery.of(context).size.height * 0.28,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color.fromARGB(50, 33, 33, 33),
+                      blurRadius: 6.0,
+                      spreadRadius: 2.0,
+                      offset: Offset(0.0, 0.0),
+                    )
+                  ],
                   color: Colors.white,
                 ),
                 child: Column(
@@ -166,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                _getVoiceBalance(0).toString(),
+                                _getVoiceBalance(1000).toString(),
                                 style: TextStyle(
                                   color: Colors.grey.shade700,
                                   fontSize: 20,
@@ -259,7 +267,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: TextStyle(
                                     color: Colors.red,
                                     fontSize: 10,
-                                    fontWeight: FontWeight.w300,
+                                    fontWeight: FontWeight.w500,
                                     letterSpacing: 2,
                                   ),
                                 )
@@ -285,7 +293,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: TextStyle(
                                     color: Colors.red,
                                     fontSize: 10,
-                                    fontWeight: FontWeight.w300,
+                                    fontWeight: FontWeight.w500,
                                     letterSpacing: 2,
                                   ),
                                 ),
@@ -294,7 +302,172 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ],
                       ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 26),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: const Color.fromARGB(255, 158, 158, 158),
+                            ),
+                            width: 20,
+                            height: 7,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: const Color.fromARGB(255, 158, 158, 158),
+                            ),
+                            width: 20,
+                            height: 7,
+                          ),
+                        ],
+                      ),
                     )
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              top: 330.0,
+              left: 20.0,
+              right: 20.0,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color.fromARGB(50, 33, 33, 33),
+                      blurRadius: 6.0,
+                      spreadRadius: 2.0,
+                      offset: Offset(0.0, 0.0),
+                    )
+                  ],
+                  color: Colors.white,
+                ),
+                width: 200,
+                height: 70,
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.line_style,
+                                color: Color.fromARGB(255, 242, 16, 0),
+                              ),
+                              SizedBox(width: 5),
+                              Text(
+                                "Airtel Money",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 242, 16, 0),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "MWK",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 242, 16, 0),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              SizedBox(width: 5),
+                              Text(
+                                "XXXXXXXXXX",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          OutlinedButton(
+                            onPressed: () {},
+                            style: OutlinedButton.styleFrom(
+                              side: const BorderSide(
+                                  color: Colors.black, width: 2),
+                            ),
+                            child: const Text(
+                              "view Balance",
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Positioned(
+              top: 302.0,
+              left: 0,
+              right: 0,
+              child: Padding(
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    SizedBox(
+                      width: 10,
+                      height: 28,
+                      child: VerticalDivider(
+                        color: Color.fromARGB(200, 158, 158, 158),
+                        thickness: 1,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                      height: 28,
+                      child: VerticalDivider(
+                        color: Color.fromARGB(200, 158, 158, 158),
+                        thickness: 1,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const Positioned(
+              top: 329.0,
+              left: 0,
+              right: 0,
+              child: Padding(
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(
+                      Icons.circle_outlined,
+                      color: Color.fromARGB(190, 71, 71, 71),
+                      size: 6,
+                      weight: 10,
+                    ),
+                    Icon(
+                      Icons.circle_outlined,
+                      color: Color.fromARGB(190, 71, 71, 71),
+                      size: 6,
+                    ),
                   ],
                 ),
               ),
@@ -308,81 +481,11 @@ class _HomeScreenState extends State<HomeScreen> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      // appBar: AppBar(
-      //   toolbarHeight: 150,
-      //   title: Column(
-      //     children: [
-      //       Row(
-      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //         children: [
-      //           Row(
-      //             children: [
-      //               SizedBox(
-      //                 height: 50,
-      //                 width: 50,
-      //                 child: Image.asset('assets/icons/airtel_appbar.png'),
-      //               ),
-      //               const Text(
-      //                 "airtel",
-      //                 style: TextStyle(
-      //                   color: Colors.white,
-      //                   fontWeight: FontWeight.bold,
-      //                   fontSize: 35,
-      //                   fontFamily: 'Ubuntu',
-      //                 ),
-      //               ),
-      //             ],
-      //           ),
-      //           Row(
-      //             children: [
-      //               IconButton(
-      //                 onPressed: () {},
-      //                 icon: const Icon(Icons.qr_code_scanner_sharp),
-      //                 color: Colors.white,
-      //               ),
-      //               IconButton(
-      //                 onPressed: () {},
-      //                 icon: const Icon(Icons.notifications),
-      //                 color: Colors.white,
-      //               ),
-      //             ],
-      //           )
-      //         ],
-      //       ),
-      //       SizedBox(
-      //         height: height * 0.1,
-      //         width: width * 1,
-      //       )
-      //     ],
-      //   ),
-      //   backgroundColor: const Color.fromRGBO(255, 0, 0, 1),
-      // ),
-      backgroundColor: const Color.fromARGB(255, 70, 20, 17),
+      // backgroundColor: const Color.fromARGB(255, 70, 20, 17),
       appBar: _appBar(AppBar().preferredSize.height),
       // body: Column(
       //   children: [
-      //     Stack(children: <Widget>[
-      //       Container(
-      //         decoration: BoxDecoration(
-      //           borderRadius: BorderRadius.circular(5),
-      //           color: const Color.fromARGB(255, 58, 11, 110),
-      //         ),
-      //         width: width * 1,
-      //         height: height * 0.1,
-      //       ),
-      //       Positioned(
-      //         bottom: 30,
-      //         right: 30,
-      //         child: Container(
-      //           decoration: BoxDecoration(
-      //             borderRadius: BorderRadius.circular(5),
-      //             color: const Color.fromARGB(255, 0, 255, 5),
-      //           ),
-      //           width: width * 1,
-      //           height: height * 0.1,
-      //         ),
-      //       ),
-      //     ])
+
       //   ],
       // ),
     );

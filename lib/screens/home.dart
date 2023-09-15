@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   _appBar(height) => PreferredSize(
-        preferredSize: Size(MediaQuery.of(context).size.width, height + 300),
+        preferredSize: Size(MediaQuery.of(context).size.width, height + 250),
         child: Stack(
           children: [
             Container(
@@ -123,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Padding(
                       padding: const EdgeInsets.only(left: 15, right: 15),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -154,16 +154,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ],
                           ),
-                          const Row(
-                            children: [
-                              VerticalDivider(
-                                width: 20,
-                                indent: 20,
-                                endIndent: 0,
-                                color: Colors.grey,
-                                thickness: 1.5,
-                              ),
-                            ],
+                          SizedBox(
+                            width: 10,
+                            height: 50,
+                            child: VerticalDivider(
+                              color: Colors.grey.shade400,
+                              thickness: 1,
+                            ),
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -193,11 +190,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ],
                           ),
-                          const VerticalDivider(
-                            indent: 20,
-                            endIndent: 20,
-                            color: Colors.grey,
-                            thickness: 1.5,
+                          SizedBox(
+                            width: 10,
+                            height: 50,
+                            child: VerticalDivider(
+                              color: Colors.grey.shade400,
+                              thickness: 1,
+                            ),
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

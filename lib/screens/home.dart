@@ -114,114 +114,187 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
-                    const Divider(
+                    Divider(
                       indent: 20,
                       endIndent: 20,
-                      color: Colors.grey,
-                      thickness: 1.5,
+                      color: Colors.grey.shade400,
+                      thickness: 1,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              _getAirtimeBalance(191.04).toString(),
-                              style: TextStyle(
-                                color: Colors.grey.shade700,
-                                fontSize: 20,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                _getAirtimeBalance(191.04).toString(),
+                                style: TextStyle(
+                                  color: Colors.grey.shade700,
+                                  fontSize: 20,
+                                ),
                               ),
-                            ),
-                            const Text(
-                              "MWK",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 242, 16, 0),
-                                fontSize: 15,
-                                fontWeight: FontWeight.normal,
+                              const Text(
+                                "MWK",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 242, 16, 0),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                                textAlign: TextAlign.left,
                               ),
-                              textAlign: TextAlign.left,
-                            ),
-                            const Text(
-                              "Airtime Balance",
-                              style: TextStyle(
+                              const Text(
+                                "Airtime Balance",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Row(
+                            children: [
+                              VerticalDivider(
+                                width: 20,
+                                indent: 20,
+                                endIndent: 0,
                                 color: Colors.grey,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w300,
+                                thickness: 1.5,
                               ),
-                            ),
-                          ],
-                        ),
-                        const VerticalDivider(
-                          width: 20,
-                          indent: 20,
-                          endIndent: 0,
-                          color: Colors.grey,
-                          thickness: 1.5,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              _getVoiceBalance(0).toString(),
-                              style: TextStyle(
-                                color: Colors.grey.shade700,
-                                fontSize: 20,
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                _getVoiceBalance(0).toString(),
+                                style: TextStyle(
+                                  color: Colors.grey.shade700,
+                                  fontSize: 20,
+                                ),
                               ),
-                            ),
-                            const Text(
-                              "Mins",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 242, 16, 0),
-                                fontSize: 15,
-                                fontWeight: FontWeight.normal,
+                              const Text(
+                                "Mins",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 242, 16, 0),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.normal,
+                                ),
                               ),
-                            ),
-                            const Text(
-                              "Voice Balance",
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w300,
+                              const Text(
+                                "Voice Balance",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w300,
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        const VerticalDivider(
-                          indent: 20,
-                          endIndent: 20,
-                          color: Colors.grey,
-                          thickness: 1.5,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              _getDataBalance(845.35).toString(),
-                              style: TextStyle(
-                                color: Colors.grey.shade700,
-                                fontSize: 20,
+                            ],
+                          ),
+                          const VerticalDivider(
+                            indent: 20,
+                            endIndent: 20,
+                            color: Colors.grey,
+                            thickness: 1.5,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                _getDataBalance(845.35).toString(),
+                                style: TextStyle(
+                                  color: Colors.grey.shade700,
+                                  fontSize: 20,
+                                ),
                               ),
-                            ),
-                            const Text(
-                              "MB",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 242, 16, 0),
-                                fontSize: 15,
-                                fontWeight: FontWeight.normal,
+                              const Text(
+                                "MB",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 242, 16, 0),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.normal,
+                                ),
                               ),
-                            ),
-                            const Text(
-                              "Data Balance",
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w300,
+                              const Text(
+                                "Data Balance",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w300,
+                                ),
                               ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Divider(
+                      indent: 20,
+                      endIndent: 20,
+                      color: Colors.grey.shade400,
+                      thickness: 1,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: const Color.fromARGB(20, 255, 0, 0),
                             ),
-                          ],
-                        )
-                      ],
+                            width: 150,
+                            height: 40,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.badge,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                                const Text(
+                                  'Buy Bundles',
+                                  style: TextStyle(
+                                    color: Colors.red,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w200,
+                                    letterSpacing: 2,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: const Color.fromARGB(20, 255, 0, 0),
+                            ),
+                            width: 150,
+                            height: 40,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.bolt_sharp,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                                const Text(
+                                  'Self Recharge',
+                                  style: TextStyle(
+                                    color: Colors.red,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 2,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),

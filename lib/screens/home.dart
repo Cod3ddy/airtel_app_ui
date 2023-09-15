@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 35,
+                                fontSize: 30,
                                 fontFamily: 'Ubuntu',
                               ),
                             ),
@@ -243,7 +243,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: const Color.fromARGB(20, 255, 0, 0),
+                              color: const Color.fromARGB(10, 255, 0, 0),
                             ),
                             width: 150,
                             height: 40,
@@ -251,7 +251,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Icon(
-                                  Icons.badge,
+                                  Icons.archive_outlined,
                                   color: Theme.of(context).primaryColor,
                                 ),
                                 const Text(
@@ -259,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: TextStyle(
                                     color: Colors.red,
                                     fontSize: 10,
-                                    fontWeight: FontWeight.w200,
+                                    fontWeight: FontWeight.w300,
                                     letterSpacing: 2,
                                   ),
                                 )
@@ -269,7 +269,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: const Color.fromARGB(20, 255, 0, 0),
+                              color: const Color.fromARGB(10, 255, 0, 0),
                             ),
                             width: 150,
                             height: 40,
@@ -285,7 +285,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: TextStyle(
                                     color: Colors.red,
                                     fontSize: 10,
-                                    fontWeight: FontWeight.w400,
+                                    fontWeight: FontWeight.w300,
                                     letterSpacing: 2,
                                   ),
                                 ),

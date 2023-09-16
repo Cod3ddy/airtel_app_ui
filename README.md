@@ -1,2 +1,2 @@
 # airtel_app_ui
-- this project is for education purposes only
+- This project is for educational purposes only!

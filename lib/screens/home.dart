@@ -529,7 +529,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListView(
       children: [
         SizedBox(
-          height: 400,
+          height: 350,
           child: Stack(
             alignment: Alignment.topCenter,
             children: [
@@ -873,7 +873,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SizedBox(
-                              height: 30,
+                              height: 40,
                               child: OutlinedButton(
                                 onPressed: () {},
                                 style: OutlinedButton.styleFrom(
@@ -885,6 +885,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 15,
+                                    fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               ),
@@ -960,9 +961,271 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SizedBox(
+            height: 250,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      "Quick Actions",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "View All",
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(10, 255, 0, 0),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: const Icon(
+                                Icons.star_outline,
+                                color: Color.fromARGB(255, 242, 16, 0),
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              "My Favorites",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey.shade900,
+                              ),
+                            ),
+                          ],
+                        ),
+                        //space between columns
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(10, 255, 0, 0),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: const Icon(
+                                Icons.monetization_on_outlined,
+                                color: Color.fromARGB(255, 242, 16, 0),
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              "Withdraw Cash",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey.shade900,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                  color: const Color.fromARGB(10, 255, 0, 0),
+                                  borderRadius: BorderRadius.circular(30)),
+                              child: const Icon(
+                                Icons.smartphone_sharp,
+                                color: Color.fromARGB(255, 242, 16, 0),
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              "Recharge",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey.shade900,
+                              ),
+                            ),
+                          ],
+                        ),
+                        //space between columns
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(10, 255, 0, 0),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: const Icon(
+                                Icons.wallet,
+                                color: Color.fromARGB(255, 242, 16, 0),
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              "Bank to Wallet",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey.shade900,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(10, 255, 0, 0),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: const Icon(
+                                Icons.archive,
+                                color: Color.fromARGB(255, 242, 16, 0),
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              "Buy Bundle",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey.shade900,
+                              ),
+                            ),
+                          ],
+                        ),
+                        //space between columns
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Column(children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(10, 255, 0, 0),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child: const Icon(
+                              Icons.receipt,
+                              color: Color.fromARGB(255, 242, 16, 0),
+                              size: 30,
+                            ),
+                          ),
+                          Text(
+                            "Pay Bills",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey.shade900,
+                            ),
+                          ),
+                        ]),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(10, 255, 0, 0),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: const Icon(
+                                Icons.forward,
+                                color: Color.fromARGB(255, 242, 16, 0),
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              "Send Money",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey.shade900,
+                              ),
+                            ),
+                          ],
+                        ),
+                        //space between columns
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(10, 255, 0, 0),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: const Icon(
+                                Icons.qr_code_scanner_sharp,
+                                color: Color.fromARGB(255, 242, 16, 0),
+                                size: 30,
+                              ),
+                            ),
+                            Text(
+                              "Scan & Pay",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey.shade900,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
         const SizedBox(
           height: 400,
-        )
+        ),
       ],
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,6 +11,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final int _number = 0981898936;
   double multiplier = 0.1;
+  List<String> assets = [
+    'assets/images/airtel_image1.png',
+    'assets/images/airtel_image2.png',
+    'assets/images/Chezani-Banner.png',
+  ];
+
   _getAirtimeBalance(balance) {
     return balance;
   }
@@ -99,8 +106,15 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         //quick actions container
         _quickActionsContainer(),
-        const SizedBox(
-          height: 400,
+
+        SizedBox(
+          height: 350,
+          child: Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              _imageCarousel(screenWidth),
+            ],
+          ),
         ),
       ],
     );
@@ -791,6 +805,54 @@ class _HomeScreenState extends State<HomeScreen> {
             size: 6,
           ),
         ],
+      ),
+    );
+  }
+
+  _imageCarousel(screenWidth) {
+    return SizedBox(
+      height: 120,
+      width: MediaQuery.of(context).size.width,
+      child: CarouselSlider.builder(
+        options: CarouselOptions(
+          aspectRatio: 16 / 9,
+          viewportFraction: 0.75,
+          initialPage: 1,
+          enableInfiniteScroll: false,
+          reverse: false,
+          autoPlay: true,
+          autoPlayInterval: const Duration(seconds: 5),
+          autoPlayAnimationDuration: const Duration(milliseconds: 1500),
+          autoPlayCurve: Curves.fastOutSlowIn,
+          enlargeCenterPage: true,
+          enlargeFactor: 0.3,
+          // onPageChanged: (){},
+          scrollDirection: Axis.horizontal,
+        ),
+        itemCount: assets.length,
+        itemBuilder: (context, index, realIndex) {
+          return Container(
+            margin: const EdgeInsets.only(left: 2, right: 2),
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: const [
+                BoxShadow(
+                  color: Color.fromARGB(100, 158, 158, 158),
+                  blurRadius: 6,
+                  spreadRadius: 2,
+                  offset: Offset(0, 0),
+                  blurStyle: BlurStyle.normal,
+                )
+              ],
+            ),
+            child: Image.asset(
+              assets[index],
+              fit: BoxFit.cover,
+            ),
+          );
+        },
       ),
     );
   }

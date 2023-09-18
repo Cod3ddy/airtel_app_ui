@@ -125,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
       top: 0,
       child: Container(
         width: MediaQuery.of(context).size.width * 0.98,
-        height: MediaQuery.of(context).size.height * 0.28,
+        height: 210,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           boxShadow: const [
@@ -133,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Color.fromARGB(50, 33, 33, 33),
               blurRadius: 6.0,
               spreadRadius: 2.0,
-              offset: Offset(0.0, 6),
+              offset: Offset(0.0, 1.5),
             )
           ],
           color: Colors.white,
@@ -355,6 +355,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+
             Padding(
               padding: const EdgeInsets.only(top: 10),
               child: Row(
@@ -661,7 +662,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Color.fromARGB(50, 33, 33, 33),
               blurRadius: 6.0,
               spreadRadius: 2.0,
-              offset: Offset(0.0, 3.0),
+              offset: Offset(0.0, 1.5),
             )
           ],
           color: Colors.white,

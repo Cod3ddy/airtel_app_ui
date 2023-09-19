@@ -355,7 +355,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.only(top: 10),
               child: Row(
@@ -858,6 +857,47 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  _bottomNavigation() {
+    return NavigationBar(
+      height: 60,
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      onDestinationSelected: (index) {
+        setState(() {});
+      },
+      indicatorColor: Colors.amber,
+      destinations: [
+        const NavigationDestination(
+          selectedIcon: Icon(Icons.home),
+          icon: Icon(Icons.home_outlined),
+          label: 'Home',
+        ),
+        NavigationDestination(
+          selectedIcon: SizedBox(
+            height: 30,
+            width: 30,
+            child: Image.asset("assets/icons/airte_money_icon.png"),
+          ),
+          icon: SizedBox(
+            height: 30,
+            width: 50,
+            child: Image.asset("assets/icons/airte_money_icon.png"),
+          ),
+          label: 'Airtel Money',
+        ),
+        const NavigationDestination(
+          selectedIcon: Icon(Icons.tv),
+          icon: Icon(Icons.tv_outlined),
+          label: 'Airtel Tv',
+        ),
+        const NavigationDestination(
+          selectedIcon: Icon(Icons.menu),
+          icon: Icon(Icons.menu_outlined),
+          label: 'More',
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // ignore: unused_local_variable
@@ -868,6 +908,7 @@ class _HomeScreenState extends State<HomeScreen> {
       // backgroundColor: const Color.fromARGB(255, 70, 20, 17),
       appBar: _appBar(width, height),
       body: _bodyUI(width, height),
+      bottomNavigationBar: _bottomNavigation(),
     );
   }
 }
